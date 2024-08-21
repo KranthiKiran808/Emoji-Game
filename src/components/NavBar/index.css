@@ -1,0 +1,20 @@
+/* Write your code here. */
+.scorecard-container {
+    display: flex;
+    gap: 30px;
+  }
+  .emoji-logo-container {
+    display: flex;
+    align-items: center;
+  }
+  .emoji-logo-container p {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .total-emoji-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+  }
+  

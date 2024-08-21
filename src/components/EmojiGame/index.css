@@ -1,0 +1,48 @@
+.game-bg-container {
+    background-image: linear-gradient(to bottom right, #9796f0, #fbc7d4);
+    height: 100vh;
+  }
+  section {
+    width: 60%;
+    margin: 50px auto;
+  }
+  .win-or-lose-card {
+    background-color: #ffffff33;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    align-items: center;
+    border-radius: 20px;
+    padding: 50px;
+  }
+  .score-details {
+    text-align: center;
+  }
+  .score-details h1 {
+    font-size: 48px;
+    margin-bottom: 24px;
+  }
+  .score-details h3 {
+    font-size: 24px;
+  }
+  .score-details .score {
+    color: #6a59ff;
+    font-size: 24px;
+  }
+  .score-details button {
+    background-color: #ffce27;
+    border: none;
+    border-radius: 10px;
+    color: #3d3d3d;
+    width: 100px;
+    font-weight: bold;
+    height: 35px;
+  }
+  .ul-emoji-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 150px;
+  }
+  

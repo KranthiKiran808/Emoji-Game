@@ -1,0 +1,12 @@
+.image-li-container {
+    background-color: #ffffff33;
+    border-radius: 20px;
+    padding: 20px;
+  }
+  .image-li-container img {
+    width: 80px;
+  }
+  .image-card-button{
+      border:none;
+      background-color: transparent;
+  }
