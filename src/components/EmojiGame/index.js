@@ -30,7 +30,7 @@ class EmojiGame extends Component {
 
       if (updatedScore === 12) {
         return {
-          isFailed: false, // Switch to the WinOrLoseCard when the score is 12
+          isFailed: false,
           score: updatedScore,
           topScore: updatedTopScore,
           clickedEmojis: [...clickedEmojis, id],
@@ -39,7 +39,6 @@ class EmojiGame extends Component {
       return {
         clickedEmojis: [...clickedEmojis, id],
         score: updatedScore,
-        topScore: updatedTopScore,
       }
     })
   }
@@ -62,16 +61,22 @@ class EmojiGame extends Component {
   }
 
   playAgain = () => {
-    this.setState(prevState => ({
+    this.setState(prevState => {
+      const {score, topScore} = prevState
+      
+      const updatedTopScore = score > topScore ? score : topScore
+      return {
       isFailed: !prevState.isFailed,
       score: 0,
+      topScore:updatedTopScore,
       clickedEmojis: [],
-    }))
+      }
+    })
   }
 
   winOrLoseCard = () => {
-    const {score} = this.state
-    return <WinOrLoseCard score={score} playAgain={this.playAgain} />
+    const {score, topScore} = this.state
+    return <WinOrLoseCard score={score} playAgain={this.playAgain} topScore={topScore}/>
   }
 
   render() {
